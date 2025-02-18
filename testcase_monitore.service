@@ -1,0 +1,11 @@
+[Unit]
+Description=Monitoring Service for test process
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/testcase_monitor.sh
+User=root
+
+[Install]
+WantedBy=multi-user.target
